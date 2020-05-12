@@ -1,16 +1,37 @@
-import React from 'react';
-import '../styles/Navbar.scss';
+import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+} from 'reactstrap';
 import { NavLink } from 'react-router-dom'
-import FA from 'react-fontawesome';
 
-export function Navbar() {
-    return <div className="nav">
-        <NavLink className="headerLink" to="/"><h1>ShareMyMusic</h1></NavLink>
+import '../styles/Navbar.scss';
 
-        <div>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/register">Register</NavLink>
-            <NavLink to="/profile"><i className="far fa-user-circle"></i></NavLink>
-        </div>
+export const NavbarComponent = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Navbar color="light" light expand="md">
+        <NavbarBrand href="#">ShareMyMusic</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto nav" navbar>
+            <NavItem>
+              <NavLink className="navLink" activeClassName="activeNavLink" to="/login">Login</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="navLink" activeClassName="activeNavLink" to="/register">Register</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
     </div>
+  );
 }

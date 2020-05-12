@@ -1,42 +1,17 @@
 @import './variables.scss';
 
 .nav {
-    background-color: $primaryColor;
-    padding: 10px 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    box-shadow: 0 4px 8px 0 rgba($color: #bbbbbb, $alpha: 0.2), 0 6px 20px 0 rgba($color: #bbbbbb, $alpha: 1.0);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-
-    .headerLink {
+    .navLink {
         text-decoration: none;
+        padding: 5px 10px;
+        color: #777777;
     }
 
-    h1 {
-        color: $headingColor;
-        margin: 0;
-        padding: 0;
+    .navLink:hover {
+        color: black;
     }
 
-    div {
-        flex-direction: column;
-
-        * {
-            text-decoration: none;
-            color: #eeeeee;
-            padding: 7px 15px;
-            margin: 5px;
-            font-weight: 700;
-            border-radius: 5px;
-        }
-
-        *:hover {
-            background-color: $primaryColorDark;
-            transition: 0.5s;
-        }
+    .activeNavLink {
+        color: black;
     }
 }

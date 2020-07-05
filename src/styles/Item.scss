@@ -1,0 +1,19 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 25px;
+  background-color: #ddd;
+  border-radius: 5px;
+
+  div {
+    p {
+      margin: 0;
+    }
+    margin-left: 20px;
+
+    .songTitle {
+      font-weight: 700;
+    }
+  }
+}

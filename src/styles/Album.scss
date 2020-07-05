@@ -1,0 +1,21 @@
+#album-info {
+
+  margin-top: 50px;
+  text-align: center;
+
+  > #album-title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  > p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+#album-info:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
